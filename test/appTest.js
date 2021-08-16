@@ -3,6 +3,13 @@ const assert = require('chai').assert
 // const addNumber =  require('../app').addNumber
 const app = require('../app')
 
+//Instead of having result var in every test block
+//set to global variables but keeping in mind this is a small appprobably 
+//not a good idea to do with a large app that multiple ppl contribute to
+/* Result as global variables */
+//goodJob = app.goodJob()
+//addNumber = app.addNumber(10,15)
+
 describe('App', function(){
     it('goodJob should return Girl you doing a job', function(){
     let result = app.goodJob()
