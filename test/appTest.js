@@ -11,25 +11,31 @@ const app = require('../app')
 //addNumber = app.addNumber(10,15)
 
 describe('App', function(){
-    it('goodJob should return Girl you doing a job', function(){
-    let result = app.goodJob()
-    assert.equal(result, 'Girl you doing a good job!')
-    })
+    describe('goodJob()', function(){
 
-    it('goodJob should return type string', function(){
+        it('goodJob should return Girl you doing a job', function(){
         let result = app.goodJob()
-        //setting function to variable
-        assert.typeOf(result, 'string')
-        //typeOf checks for data type
+        assert.equal(result, 'Girl you doing a good job!')
+        })
+    
+        it('goodJob should return type string', function(){
+            let result = app.goodJob()
+            //setting function to variable
+            assert.typeOf(result, 'string')
+            //typeOf checks for data type
+        })
     })
 
-    it('addNumber should be above 5', function(){
-        let result = app.addNumber(10,15)
-        assert.isAbove(result,5)
-    })
-    it('addNumber should return type integer', function(){
-        let result = app.addNumber(10,15)
-        assert.typeOf(result, 'string')
+    describe('addNumber', function(){
+
+        it('addNumber should be above 5', function(){
+            let result = app.addNumber(10,15)
+            assert.isAbove(result,5)
+        })
+        it('addNumber should return type integer', function(){
+            let result = app.addNumber(10,15)
+            assert.typeOf(result, 'string')
+        })
     })
 
 })
